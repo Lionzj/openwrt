@@ -30,7 +30,7 @@ git pull origin master
 git branch --set-upstream-to=origin/master master
 
 cd ../lean
-#git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/lua-maxminddb.git
 git clone https://github.com/jerrykuku/luci-app-vssr.git
 
 rm -rf luci-theme-argon
