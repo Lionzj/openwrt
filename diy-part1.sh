@@ -18,7 +18,7 @@
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 # sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 # sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git lienol https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+# sed -i '$a src-git lienol https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
 mkdir package/luci-app-openclash
 cd package/luci-app-openclash
@@ -29,12 +29,12 @@ echo "luci-app-openclash" >> .git/info/sparse-checkout
 git pull origin master
 git branch --set-upstream-to=origin/master master
 
-cd ../lean
-git clone https://github.com/jerrykuku/lua-maxminddb.git
-git clone https://github.com/jerrykuku/luci-app-vssr.git
+# cd ../lean
+# git clone https://github.com/jerrykuku/lua-maxminddb.git
+# git clone https://github.com/jerrykuku/luci-app-vssr.git
 
-rm -rf luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-git clone https://github.com/jerrykuku/luci-app-argon-config.git
+# rm -rf luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git
 
 #git clone https://github.com/lisaac/luci-app-dockerman.git
