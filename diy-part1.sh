@@ -25,11 +25,12 @@ sed -i '$a src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.g
 mkdir package/luci-app-openclash
 cd package/luci-app-openclash
 git init
-git remote add -f origin https://github.com/vernesong/OpenClash.git
-git config core.sparsecheckout true
-echo "luci-app-openclash" >> .git/info/sparse-checkout
-git pull --depth 1 origin master
-git branch --set-upstream-to=origin/master master
+git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
+#git remote add -f origin https://github.com/vernesong/OpenClash.git
+#git config core.sparsecheckout true
+#echo "luci-app-openclash" >> .git/info/sparse-checkout
+#git pull --depth 1 origin master
+#git branch --set-upstream-to=origin/master master
 
 # cd ../lean
 # git clone https://github.com/jerrykuku/lua-maxminddb.git
