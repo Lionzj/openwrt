@@ -18,21 +18,22 @@ sudo -E apt-get -qq install ack antlr3 asciidoc autoconf automake autopoint binu
 # Add a feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld;main' feeds.conf.default
+sed -i '$a src-git openclash https://github.com/vernesong/OpenClash.git;dev' feeds.conf.default
 # sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 # sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 # sed -i '$a src-git lienol https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 # sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall.git;packages' feeds.conf.default
 # sed -i '$a src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;luci' feeds.conf.default
 
-mkdir package/luci-app-openclash
-cd package/luci-app-openclash
-git init
-git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
-#git remote add -f origin https://github.com/vernesong/OpenClash.git
-#git config core.sparsecheckout true
-#echo "luci-app-openclash" >> .git/info/sparse-checkout
-#git pull --depth 1 origin master
-#git branch --set-upstream-to=origin/master master
+# mkdir package/luci-app-openclash
+# cd package/luci-app-openclash
+# git init
+# git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
+# git remote add -f origin https://github.com/vernesong/OpenClash.git
+# git config core.sparsecheckout true
+# echo "luci-app-openclash" >> .git/info/sparse-checkout
+# git pull --depth 1 origin master
+# git branch --set-upstream-to=origin/master master
 
 # cd ../lean
 # git clone https://github.com/jerrykuku/lua-maxminddb.git
